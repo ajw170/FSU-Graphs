@@ -291,6 +291,7 @@
 		9849CF541E9F0D1D00E3AED2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-I$(PROJECT_DIR)/Support\\ Files/CPP",
 					"-I$(PROJECT_DIR)/Support\\ Files/TCPP",
@@ -303,6 +304,7 @@
 		9849CF551E9F0D1D00E3AED2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-I$(PROJECT_DIR)/Support\\ Files/CPP",
 					"-I$(PROJECT_DIR)/Support\\ Files/TCPP",
@@ -315,6 +317,7 @@
 		9890B9781EA051690001DDEA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -322,6 +325,7 @@
 		9890B9791EA051690001DDEA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -354,6 +358,7 @@
 				9890B9791EA051690001DDEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

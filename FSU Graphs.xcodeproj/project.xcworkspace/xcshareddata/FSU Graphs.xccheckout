@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>52EAA6DD-AED4-4D63-A542-5207489B6087</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FSU Graphs</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C04AE226A9DFA308BFEBEC72C0296E1A2430039D</key>
+		<string>https://github.com/ajw170/FSU-Graphs.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FSU Graphs.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C04AE226A9DFA308BFEBEC72C0296E1A2430039D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ajw170/FSU-Graphs.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C04AE226A9DFA308BFEBEC72C0296E1A2430039D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C04AE226A9DFA308BFEBEC72C0296E1A2430039D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FSU-Graphs</string>
+		</dict>
+	</array>
+</dict>
+</plist>
