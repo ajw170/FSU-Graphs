@@ -85,7 +85,10 @@ namespace fsu {
         color_      (g_.VrtxSize(), 'w'),
         neighbor_   (g_.VrtxSize()),
         conQ_()
-    {}
+    {
+        for (Vertex x = 0; x < g_.VrtxSize(); ++x)
+            neighbor_[x] = g_.Begin(x);
+    }
     
     template < class G >
     DFSurvey<G>::DFSurvey (const Graph & g, Vertex start)
@@ -96,11 +99,103 @@ namespace fsu {
     color_      (g_.VrtxSize(), 'w'),
     neighbor_   (g_.VrtxSize()),
     conQ_()
-    {}
+    {
+        for (Vertex x = 0; x < g_.VrtxSize(); ++x)
+            neighbor_[x] = g_.Begin(x);
+    }
     
+    template < class G >
+    void DFSurvey<G>::Search()
+    {
+        Reset();
+        if (traceQue)
+        {
+            ShowQueSetup(std::cout);
+            ShowQue(std::cout);
+        }
+        for (Vertex v = start_; v < g_.VrtxSize(); ++v)
+        {
+            if (color_[v] == 'w')
+                Search(v);
+        }
+        for (Vertex v = 0; v < start_; ++v)
+        {
+            if (color_[v] == 'w')
+                Search(v);
+        }
+    }
     
+    template < class G >
+    void DFSurvey<G>::Search(Vertex v)
+    {
+        dtime_[v] = time_++;
+        conQ_.PushBack(v);
+        if (traceQue)
+            ShowQue(std::cout);
+        color_[v] = 'g';
+        Vertex top;
+        AdjIterator i;
+        while (!conQ_.Empty())
+        {
+            top = conQ_.Back();
+            i = NextNeighbor(top);
+            if (i != g_.End(top))
+            {
+                dtime_[*i] = time_++;
+                conQ_.PushBack(*i);
+                if (traceQue)
+                    ShowQue(std::cout);
+                parent_[*i] = top;
+                color_[*i] = 'g';
+            }
+            else
+            {
+                conQ_.PopBack();
+                if (traceQue)
+                    ShowQue(std::cout);
+                color_[top] = 'b';
+                ftime_[top] = time_++;
+            }
+        }
+    }
     
+    template < class G >
+    void DFSurvey<G>::Reset()
+    {
+        time_ = 0;
+        conQ_.Clear();
+        if (color_.Size() != g_.VrtxSize()) //changed vertex size
+        {
+            forever_    = 2*g_.VrtxSize();
+            null_       = (Vertex)g_.VrtxSize();
+            dtime_.SetSize (g_.VrtxSize(), forever_);
+            ftime_.SetSize (g_.VrtxSize(), forever_);
+            parent_.SetSize (g_.VrtxSize(), null_);
+            color_.SetSize (g_.VrtxSize(), 'w');
+            neighbor_.SetSize(g_.VrtxSize());
+            for (Vertex x = 0; x < g_.VrtxSize(); ++x)
+                neighbor_[x] = g_.Begin(x);
+        }
+        else
+        {
+            for (Vertex x = 0; x < g_.VrtxSize(); ++x)
+            {
+                dtime_[x] = forever_;
+                ftime_[x] = forever_;
+                parent_[x] = null_;
+                color_[x] = 'w';
+                neighbor_[x] = g_.Begin(x);
+            }
+        }
+    }
     
+    template < class G >
+    typename DFSurvey<G>::AdjIterator DFSurvey<G>::NextNeighbor (Vertex x)
+    {
+        while (neighbor_[x] != g_.End(x) && 'w' != color_[*neighbor_[x]])
+            ++neighbor_[x];
+        return neighbor_[x];
+    }
     
     
     //Developer helper methods

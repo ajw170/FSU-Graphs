@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9849CF5D1E9F0EC600E3AED2 /* fgraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9849CF5A1E9F0EC600E3AED2 /* fgraph.cpp */; };
 		9890B97A1EA0517E0001DDEA /* fbfsurvey.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9849CF581E9F0EC600E3AED2 /* fbfsurvey.cpp */; };
+		98F10B061EA17BA0006706C9 /* fdfsurvey.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9849CF591E9F0EC600E3AED2 /* fdfsurvey.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		98F10AFD1EA17B92006706C9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +53,7 @@
 		9890B96E1EA042910001DDEA /* bfsurvey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bfsurvey.h; sourceTree = "<group>"; };
 		9890B9731EA051690001DDEA /* Graph BFSurvey UD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Graph BFSurvey UD"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9890B97B1EA076B20001DDEA /* dfsurvey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dfsurvey.h; sourceTree = "<group>"; };
+		98F10AFF1EA17B92006706C9 /* Graph DFSurvey UD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Graph DFSurvey UD"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +65,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9890B9701EA051690001DDEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98F10AFC1EA17B92006706C9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -77,6 +95,7 @@
 			children = (
 				9849CF4C1E9F0D1D00E3AED2 /* FSU Graphs */,
 				9890B9731EA051690001DDEA /* Graph BFSurvey UD */,
+				98F10AFF1EA17B92006706C9 /* Graph DFSurvey UD */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,6 +151,23 @@
 			productReference = 9890B9731EA051690001DDEA /* Graph BFSurvey UD */;
 			productType = "com.apple.product-type.tool";
 		};
+		98F10AFE1EA17B92006706C9 /* Graph DFSurvey UD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98F10B051EA17B92006706C9 /* Build configuration list for PBXNativeTarget "Graph DFSurvey UD" */;
+			buildPhases = (
+				98F10AFB1EA17B92006706C9 /* Sources */,
+				98F10AFC1EA17B92006706C9 /* Frameworks */,
+				98F10AFD1EA17B92006706C9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Graph DFSurvey UD";
+			productName = "Graph DFSurvey UD";
+			productReference = 98F10AFF1EA17B92006706C9 /* Graph DFSurvey UD */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -146,6 +182,10 @@
 						ProvisioningStyle = Automatic;
 					};
 					9890B9721EA051690001DDEA = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					98F10AFE1EA17B92006706C9 = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -165,6 +205,7 @@
 			targets = (
 				9849CF4B1E9F0D1D00E3AED2 /* FSU Graphs */,
 				9890B9721EA051690001DDEA /* Graph BFSurvey UD */,
+				98F10AFE1EA17B92006706C9 /* Graph DFSurvey UD */,
 			);
 		};
 /* End PBXProject section */
@@ -183,6 +224,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9890B97A1EA0517E0001DDEA /* fbfsurvey.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98F10AFB1EA17B92006706C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98F10B061EA17BA0006706C9 /* fdfsurvey.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +379,20 @@
 			};
 			name = Release;
 		};
+		98F10B031EA17B92006706C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		98F10B041EA17B92006706C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -359,6 +422,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		98F10B051EA17B92006706C9 /* Build configuration list for PBXNativeTarget "Graph DFSurvey UD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98F10B031EA17B92006706C9 /* Debug */,
+				98F10B041EA17B92006706C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
