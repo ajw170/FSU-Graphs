@@ -76,6 +76,7 @@ int main( int argc , char* argv[] )
   // perform bfsurvey
   fsu::BFSurvey <GraphType> bfs(g,start);
   bfs.traceQue = traceQue;
+    
   if (survey) // do complete survey
   {
     bfs.Search();

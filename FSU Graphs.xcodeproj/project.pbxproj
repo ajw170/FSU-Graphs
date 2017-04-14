@@ -8,10 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		9849CF5D1E9F0EC600E3AED2 /* fgraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9849CF5A1E9F0EC600E3AED2 /* fgraph.cpp */; };
+		9890B97A1EA0517E0001DDEA /* fbfsurvey.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9849CF581E9F0EC600E3AED2 /* fbfsurvey.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		9849CF4A1E9F0D1D00E3AED2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		9890B9711EA051690001DDEA /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -28,10 +38,22 @@
 		9849CF581E9F0EC600E3AED2 /* fbfsurvey.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fbfsurvey.cpp; sourceTree = "<group>"; };
 		9849CF591E9F0EC600E3AED2 /* fdfsurvey.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fdfsurvey.cpp; sourceTree = "<group>"; };
 		9849CF5A1E9F0EC600E3AED2 /* fgraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fgraph.cpp; sourceTree = "<group>"; };
+		9849CF5E1E9F112100E3AED2 /* graph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = graph.h; path = ../graph.h; sourceTree = "<group>"; };
+		9849CF5F1E9F26C300E3AED2 /* graph1.10.10 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = graph1.10.10; path = ../graph1.10.10; sourceTree = "<group>"; };
+		9890B96E1EA042910001DDEA /* bfsurvey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bfsurvey.h; sourceTree = "<group>"; };
+		9890B9731EA051690001DDEA /* Graph BFSurvey UD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Graph BFSurvey UD"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9890B97B1EA076B20001DDEA /* dfsurvey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dfsurvey.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9849CF491E9F0D1D00E3AED2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9890B9701EA051690001DDEA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -54,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				9849CF4C1E9F0D1D00E3AED2 /* FSU Graphs */,
+				9890B9731EA051690001DDEA /* Graph BFSurvey UD */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,9 +84,13 @@
 		9849CF4E1E9F0D1D00E3AED2 /* FSU Graphs */ = {
 			isa = PBXGroup;
 			children = (
+				9849CF5F1E9F26C300E3AED2 /* graph1.10.10 */,
+				9849CF5E1E9F112100E3AED2 /* graph.h */,
+				9890B96E1EA042910001DDEA /* bfsurvey.h */,
 				9849CF581E9F0EC600E3AED2 /* fbfsurvey.cpp */,
 				9849CF591E9F0EC600E3AED2 /* fdfsurvey.cpp */,
 				9849CF5A1E9F0EC600E3AED2 /* fgraph.cpp */,
+				9890B97B1EA076B20001DDEA /* dfsurvey.h */,
 			);
 			path = "FSU Graphs";
 			sourceTree = "<group>";
@@ -88,6 +115,23 @@
 			productReference = 9849CF4C1E9F0D1D00E3AED2 /* FSU Graphs */;
 			productType = "com.apple.product-type.tool";
 		};
+		9890B9721EA051690001DDEA /* Graph BFSurvey UD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9890B9771EA051690001DDEA /* Build configuration list for PBXNativeTarget "Graph BFSurvey UD" */;
+			buildPhases = (
+				9890B96F1EA051690001DDEA /* Sources */,
+				9890B9701EA051690001DDEA /* Frameworks */,
+				9890B9711EA051690001DDEA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Graph BFSurvey UD";
+			productName = "Graph BFSurvey UD";
+			productReference = 9890B9731EA051690001DDEA /* Graph BFSurvey UD */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +142,10 @@
 				ORGANIZATIONNAME = FSU;
 				TargetAttributes = {
 					9849CF4B1E9F0D1D00E3AED2 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					9890B9721EA051690001DDEA = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -116,6 +164,7 @@
 			projectRoot = "";
 			targets = (
 				9849CF4B1E9F0D1D00E3AED2 /* FSU Graphs */,
+				9890B9721EA051690001DDEA /* Graph BFSurvey UD */,
 			);
 		};
 /* End PBXProject section */
@@ -126,6 +175,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9849CF5D1E9F0EC600E3AED2 /* fgraph.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9890B96F1EA051690001DDEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9890B97A1EA0517E0001DDEA /* fbfsurvey.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +232,12 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-I$(PROJECT_DIR)",
+					"-I$(PROJECT_DIR)/Support\\ Files/CPP",
+					"-I$(PROJECT_DIR)/Support\\ Files/TCPP",
+					"-I$(PROJECT_DIR)/FSU\\ Graphs",
+				);
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -215,6 +278,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-I$(PROJECT_DIR)",
+					"-I$(PROJECT_DIR)/Support\\ Files/CPP",
+					"-I$(PROJECT_DIR)/Support\\ Files/TCPP",
+					"-I$(PROJECT_DIR)/FSU\\ Graphs",
+				);
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -223,10 +292,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				OTHER_CPLUSPLUSFLAGS = (
-					"-I$(PROJECT_DIR)/Support",
-					Files/CPP,
-					"-I$(PROJECT_DIR)/Support",
-					Files/TCPP,
+					"-I$(PROJECT_DIR)/Support\\ Files/CPP",
+					"-I$(PROJECT_DIR)/Support\\ Files/TCPP",
+					"-I$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -236,11 +304,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				OTHER_CPLUSPLUSFLAGS = (
-					"-I$(PROJECT_DIR)/Support",
-					Files/CPP,
-					"-I$(PROJECT_DIR)/Support",
-					Files/TCPP,
+					"-I$(PROJECT_DIR)/Support\\ Files/CPP",
+					"-I$(PROJECT_DIR)/Support\\ Files/TCPP",
+					"-I$(PROJECT_DIR)",
 				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9890B9781EA051690001DDEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9890B9791EA051690001DDEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -262,6 +343,15 @@
 			buildConfigurations = (
 				9849CF541E9F0D1D00E3AED2 /* Debug */,
 				9849CF551E9F0D1D00E3AED2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9890B9771EA051690001DDEA /* Build configuration list for PBXNativeTarget "Graph BFSurvey UD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9890B9781EA051690001DDEA /* Debug */,
+				9890B9791EA051690001DDEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

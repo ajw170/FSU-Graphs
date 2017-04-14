@@ -1,0 +1,21 @@
+#
+# file graph1.10.10
+#
+# This is the graph G1                   0 --- 1     2 --- 6 --- 7
+# depicted to the right                  |           |           |
+#                                        |           |           |
+# G1 has 10 vertices                     3 --- 4 --- 5 --- 8 --- 9
+# G1 has 10 edges                                Graph G1
+#
+# G1 is used in the notes chapter on graphs
+#
+
+10
+0 1 0 3
+2 5 2 6
+3 4
+4 5
+5 8
+6 7
+7 9
+8 9
