@@ -229,14 +229,12 @@ namespace fsu {
     }
     
     template < typename N >
-    ALDGraph<N>::ALDGraph () //default constructor
+    ALDGraph<N>::ALDGraph () : ALUGraph<N>() //default constructor
     {}
     
     template < typename N >
-    ALDGraph<N>::ALDGraph(N n)
-    {
-        (this->al_).SetSize(n);
-    }
+    ALDGraph<N>::ALDGraph(N n) : ALUGraph<N> (n)
+    {}
     
 }//end namespace fsu
 

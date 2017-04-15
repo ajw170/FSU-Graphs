@@ -193,7 +193,7 @@ namespace fsu {
     typename DFSurvey<G>::AdjIterator DFSurvey<G>::NextNeighbor (Vertex x)
     {
         while (neighbor_[x] != g_.End(x) && 'w' != color_[*neighbor_[x]])
-            ++neighbor_[x];
+            ++neighbor_[x]; //this is a list iterator
         return neighbor_[x];
     }
     
